@@ -17,8 +17,6 @@ class LeagueVC: UIViewController {
 
         player = Player()
         
-        
-        
     }
 
     
@@ -56,5 +54,12 @@ class LeagueVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let skillVC = segue.destination as? SkillVC {
+            skillVC.player = player
+    }
+    }
+
 
 }
