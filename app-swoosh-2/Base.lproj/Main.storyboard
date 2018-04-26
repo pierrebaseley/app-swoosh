@@ -126,7 +126,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grv-V6-C49" customClass="BorderButton" customModule="app_swoosh_2" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grv-V6-C49" customClass="BorderButton" customModule="app_swoosh_2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="698" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4962542808" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -154,6 +154,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="o5X-TW-MEb" eventType="touchUpInside" id="GdA-oQ-f1D"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-pE-It5" customClass="BorderButton" customModule="app_swoosh_2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="100" width="375" height="60"/>
@@ -165,6 +168,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="o5X-TW-MEb" eventType="touchUpInside" id="o4w-RR-wK0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsg-Qz-QdE" customClass="BorderButton" customModule="app_swoosh_2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="200" width="375" height="60"/>
@@ -176,6 +182,9 @@
                                         <state key="normal" title="Mixed">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMixedTapped:" destination="o5X-TW-MEb" eventType="touchUpInside" id="O5d-D5-noj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -208,6 +217,7 @@
                         <viewLayoutGuide key="safeArea" id="9iQ-Pw-WGe"/>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="grv-V6-C49" id="b4G-hZ-XYu"/>
                         <segue destination="qHq-Iw-BTf" kind="show" identifier="skillVCSegue" id="rDF-dk-LLC"/>
                     </connections>
                 </viewController>
